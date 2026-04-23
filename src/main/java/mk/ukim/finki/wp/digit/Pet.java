@@ -25,6 +25,9 @@ public class Pet {
     private String contact;
     @Column(columnDefinition = "TEXT")
     private String image;
-    private String status; // "adoption" или "request"
+    private String status;
     private LocalDateTime createdAt;
+    private String location;
+    private String gender;
+    private String date;
 }

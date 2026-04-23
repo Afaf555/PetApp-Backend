@@ -42,4 +42,8 @@ public class PetController {
         request.setCreatedAt(LocalDateTime.now());
         return adoptionRequestRepository.save(request);
     }
+    @GetMapping("/lost")
+    public List<Pet> getLostPets() {
+        return petRepository.findByStatus("lost");
+    }
 }
